@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Tesla";
+  src: url(./src/assets/font/tesla-font/TESLA.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Cyberpunk";
+  src: url(./src/assets/font/Cyberpunk/Cyberpunk-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "GoodTimes";
+  src: url(./src/assets/font/good-times/good-times.otf) format("opentype");
+}
+@import url("https://fonts.googleapis.com/css2?family=Akshar&display=swap");
+
+.tesla-font {
+  font-family: "Tesla";
+  font-weight: 400;
+}
+.cyberpunk-font {
+  font-family: "Cyberpunk";
+  color: white;
+  font-weight: 400;
+}
+
+//use in headings other than h1
+.goodtimes {
+  font-family: GoodTimes;
+  letter-spacing: 0.3rem;
+  color: white;
+}
+
+//use in long text
+.akshar {
+  font-family: "Akshar", sans-serif;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "cybertruck-product-landing-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx sass ./src/style.scss ./style.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "landing",
+    "page"
+  ],
+  "author": "Roman Cabalum",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.50.1"
+  }
+}
