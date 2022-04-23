@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const https = require("https");
 const path = require("path");
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //class for mailchimpjson
 function Member(email, name, number, company) {
@@ -78,6 +78,6 @@ app.post("/", (req, res) => {
   request.end();
 });
 
-app.listen(process.env.PORT || port, () => {
+app.listen(port, () => {
   console.log(`Listening on Port ${port}`);
 });
