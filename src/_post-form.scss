@@ -21,7 +21,6 @@ $outline: #45a29e;
 #form-endpoint {
   @include fullScreen();
   background-color: $blacks;
-  height: 100vh;
   .container {
     @include flexCenter();
     height: fit-content;
@@ -49,6 +48,7 @@ $outline: #45a29e;
         border-radius: 20px;
         flex-direction: column;
         width: 100%;
+
         background-color: #292b2cb4;
         padding: 1rem 0;
         .btn {
@@ -65,6 +65,7 @@ $outline: #45a29e;
         input {
           height: 3.5rem;
           width: 20vw;
+          min-height: 3.5rem;
           border: none;
           border-bottom: 1px solid #1f2833;
           padding: 0 1rem;
@@ -124,31 +125,42 @@ $outline: #45a29e;
     width: 100vw;
 
     .container {
+      height: fit-content;
       flex-direction: column;
       margin: 0;
       padding: 0;
       gap: 2rem;
       .about {
         width: 100vw;
-        margin: 0;
         padding: 0;
+        height: 100vh;
+
         img {
           min-width: 250px;
         }
       }
       .wrap {
+        height: 100vh;
         width: 90vw;
+        gap: 3rem;
         form {
           width: 100%;
           margin: 3rem 0;
+          height: 150vw;
+          max-height: 600px;
+          li {
+            width: 100%;
+          }
           h1 {
             margin: 0;
           }
           input {
             width: 80%;
+            height: 5vh;
           }
           .btn {
             width: 80%;
+            height: 5vh;
           }
         }
       }
