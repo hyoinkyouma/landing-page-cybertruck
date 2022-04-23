@@ -44,7 +44,7 @@ app.get("/post-form", (req, res) => {
 });
 
 app.post("/failure", (req, res) => {
-  res.redirect("/post-form");
+  res.redirect("/");
 });
 
 app.post("/", (req, res) => {
@@ -63,7 +63,7 @@ app.post("/", (req, res) => {
   //options for http req
   const options = {
     method: "POST",
-    auth: `roman:`,
+    auth: `roman:${apiKey}`,
   };
 
   //API Req
