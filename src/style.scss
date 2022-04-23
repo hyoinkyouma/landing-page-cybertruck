@@ -28,7 +28,7 @@ body {
 }
 
 #home {
-  background-image: url("./src/assets/cybertruck-sideview.jpg");
+  background-image: url("./assets/cybertruck-sideview.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -288,7 +288,7 @@ a {
 @media only screen and (max-width: $small) {
   #home {
     //desktop bg does not look good at this size
-    background-image: url("./src/assets/mobile-bg.png");
+    background-image: url("./assets/mobile-bg.png");
     //changes spacing between header and call to action button
     .container {
       padding-bottom: 20%;
