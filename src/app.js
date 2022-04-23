@@ -43,6 +43,10 @@ app.get("/post-form", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/post_form.html"));
 });
 
+app.post("/failure", (req, res) => {
+  res.redirect("/post-form");
+});
+
 app.post("/", (req, res) => {
   const user = new Member(
     req.body.email,
@@ -59,14 +63,14 @@ app.post("/", (req, res) => {
   //options for http req
   const options = {
     method: "POST",
-    auth: `roman:${apiKey}`,
+    auth: `roman:`,
   };
 
   //API Req
   //response is verbose to not confuse with res above
   const request = https.request(url, options, (response) => {
     if (response.statusCode == 200) {
-      res.sendFile(path.join(__dirname, "../public/sucess.html"));
+      res.sendFile(path.join(__dirname, "../public/success.html"));
     } else {
       res.sendFile(path.join(__dirname, "../public/failure.html"));
     }
