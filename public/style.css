@@ -80,6 +80,14 @@
     transform: width(0.2);
   }
 }
+@keyframes navSwitch {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
 @media only screen and (max-width: 600px) {
   @keyframes navFadeIn {
     from {
@@ -105,7 +113,6 @@ nav {
 }
 nav ul {
   display: flex;
-  gap: 1vw;
   list-style: none;
 }
 nav ul li {
@@ -113,9 +120,14 @@ nav ul li {
   font-size: 0.7em;
   letter-spacing: 2.3px;
 }
+nav ul li a {
+  padding: 1vh;
+}
 nav ul li a:hover {
-  animation: glitch 1s infinite;
   cursor: pointer;
+  padding: 1vh;
+  border-radius: 100px;
+  animation: navSwitch 0.5s ease forwards;
 }
 nav .logo {
   text-transform: uppercase;
@@ -138,6 +150,9 @@ nav .logo {
   }
   nav ul li {
     font-size: 2.3vw;
+  }
+  nav ul li a {
+    padding: 0;
   }
 }
 @media only screen and (max-width: 600px) {
