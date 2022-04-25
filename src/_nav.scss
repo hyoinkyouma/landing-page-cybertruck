@@ -2,8 +2,8 @@
 @use "animation";
 
 nav {
-  position: relative;
-  position: absolute;
+  //position: relative;
+  position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-around;

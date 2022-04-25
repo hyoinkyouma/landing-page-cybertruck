@@ -5,11 +5,11 @@ const app = express();
 const bodyParser = require("body-parser");
 const https = require("https");
 const path = require("path");
-const creds = require("./creds.js");
+//const creds = require("./creds.js");
 
 const port = process.env.PORT || 3000;
 
-console.log(creds);
+//console.log(creds);
 
 //class for mailchimpjson
 function Member(email, name, number, company) {
@@ -25,12 +25,6 @@ function Member(email, name, number, company) {
     },
   ];
 }
-
-//Mailchimp keys
-//api key
-//248675f79100a1c9b71f35f22d65a5e0-us14
-//list Id
-//ff35c83c20
 
 //need css files, assets (image, font, etc.), and front-end js
 app.use(express.static(path.join(__dirname, "../public/")));
@@ -63,8 +57,8 @@ app.post("/", (req, res) => {
   );
   const jsonData = JSON.stringify(user);
 
-  const apiKey = creds.apiKey;
-  const listID = creds.listID;
+  // const apiKey = creds.apiKey;
+  // const listID = creds.listID;
 
   const url = `https://us14.api.mailchimp.com/3.0/lists/${listID}`;
 
