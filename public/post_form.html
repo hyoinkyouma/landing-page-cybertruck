@@ -90,7 +90,10 @@
         );
         console.log(jsonData);
         nameField.value = jsonData.fullName;
-        phoneField.value = Number(jsonData.phone);
+
+        if (Number(jsonData.phone) != 0) {
+          phoneField.value = Number(jsonData.phone);
+        }
         emailField.value = jsonData.email;
       };
 

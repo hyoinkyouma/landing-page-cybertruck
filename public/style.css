@@ -147,26 +147,28 @@ nav .logo {
     padding: 0;
     margin: 1rem auto;
     justify-content: center;
+    height: 60px;
   }
 
   .nav-items {
     display: none;
     position: absolute;
-    right: 10%;
+    right: 10vw;
+    top: 70%;
     text-align: right;
-    bottom: -170%;
     gap: 0.5rem;
     flex-direction: column;
   }
   .nav-items li {
     opacity: 0;
     transform: translateY(50px);
+    font-size: 1rem;
   }
 
   .burger {
     position: absolute;
     right: 10%;
-    top: -7%;
+    bottom: 1.13vh;
     font-size: 2.5rem;
     display: inline-block;
   }
@@ -339,7 +341,7 @@ button:hover {
   }
   #form-endpoint .container .wrap form .btn {
     width: 80%;
-    height: 5vh;
+    height: 10%;
   }
 }
 * {
@@ -585,7 +587,7 @@ a {
     row-gap: 2rem;
   }
   #packages .container .card {
-    width: 80%;
+    width: 90%;
   }
 
   #newsletter .container {
@@ -633,6 +635,7 @@ a {
   }
   #packages .container .card {
     width: 100%;
+    height: fit-content;
   }
 }
 
