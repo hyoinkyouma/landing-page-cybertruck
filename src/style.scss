@@ -5,7 +5,7 @@
 @use "post-form";
 
 //screensizes
-$small: 600px;
+$small: 750px;
 $medium: 1100px;
 
 @mixin fullScreen {
@@ -68,9 +68,10 @@ body {
     grid-template-rows: 1fr 1fr 2fr;
     padding: 0 3rem;
     margin: 0 auto;
+    width: 100%;
     row-gap: 1rem;
     img {
-      width: 800px;
+      width: 100%;
     }
     .with-video {
       grid-column: 1/3;
@@ -106,6 +107,9 @@ body {
 #packages {
   background-color: #fbfcf6;
   padding: 2rem 0;
+  display: grid;
+  align-items: center;
+  width: 100%;
   h2 {
     color: black;
     text-align: center;
@@ -114,9 +118,10 @@ body {
   .container {
     @include fullScreen();
     grid-auto-flow: column;
-    width: 70%;
+    width: 80%;
     height: fit-content;
     margin: 0 auto;
+    justify-content: space-around;
 
     .card {
       color: white;
