@@ -5,6 +5,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const https = require("https");
 const path = require("path");
+//API keys and list ids are in creds.js file
+//Which isn't on github, feel free to add your own endpoints.
 //const creds = require("./creds.js");
 
 const port = process.env.PORT || 3000;
