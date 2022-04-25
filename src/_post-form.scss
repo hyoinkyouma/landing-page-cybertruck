@@ -5,6 +5,7 @@ $whites: #c5c6c7;
 $greys: #66fcf1;
 $dark: #292b2c;
 $outline: #45a29e;
+
 @mixin fullScreen {
   height: 100vh;
   display: grid;
@@ -118,6 +119,10 @@ $outline: #45a29e;
   }
 }
 
+.btn-contact {
+  display: none;
+}
+
 //media breakpoints for form.html
 @media only screen and (max-width: 900px) {
   #form-endpoint {
@@ -165,5 +170,8 @@ $outline: #45a29e;
         }
       }
     }
+  }
+  .btn-contact {
+    display: inline-block;
   }
 }

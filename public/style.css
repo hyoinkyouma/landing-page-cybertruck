@@ -298,6 +298,10 @@ button:hover {
   margin: 2rem;
 }
 
+.btn-contact {
+  display: none;
+}
+
 @media only screen and (max-width: 900px) {
   #form-endpoint {
     height: fit-content;
@@ -342,6 +346,10 @@ button:hover {
   #form-endpoint .container .wrap form .btn {
     width: 80%;
     height: 10%;
+  }
+
+  .btn-contact {
+    display: inline-block;
   }
 }
 * {

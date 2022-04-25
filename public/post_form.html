@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
     <link href="./style.css" rel="stylesheet" />
+    <link
+      href="./assets/rocket-launch-fill.svg"
+      rel="icon"
+      type="image/x-icon"
+    />
     <script src="https://unpkg.com/phosphor-icons"></script>
     <script
       src="https://kit.fontawesome.com/391accf7e3.js"
@@ -38,7 +43,9 @@
             <br />Thanks for vising my website.
           </p>
           <button class="btn go-back">Go Back</button>
-          <a href="#answerForm"><button class="btn">Contacts</button></a>
+          <a href="#answerForm"
+            ><button class="btn btn-contact">Contacts</button></a
+          >
         </div>
         <div class="wrap" id="answerForm">
           <form action="/" method="post">
@@ -51,7 +58,7 @@
               placeholder="Company"
             />
             <input type="email" id="email" name="email" placeholder="Email" />
-            <input type="number" id="phone" name="phone" placeholder="Phone" />
+            <input type="tel" id="phone" name="phone" placeholder="Phone" />
             <button class="btn" type="submit">Submit</button>
 
             <div class="contact-icons">
@@ -92,7 +99,7 @@
         nameField.value = jsonData.fullName;
 
         if (Number(jsonData.phone) != 0) {
-          phoneField.value = Number(jsonData.phone);
+          phoneField.value = jsonData.phone;
         }
         emailField.value = jsonData.email;
       };

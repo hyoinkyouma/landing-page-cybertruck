@@ -29,7 +29,7 @@ function Member(email, name, number, company) {
 //list Id
 //ff35c83c20
 
-//need css files
+//need css files, assets (image, font, etc.), and front-end js
 app.use(express.static(path.join(__dirname, "../public/")));
 
 //need to parse post request
@@ -43,8 +43,12 @@ app.get("/post-form", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/post_form.html"));
 });
 
+app.get("/failure", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/failure.html"));
+});
+
 app.post("/failure", (req, res) => {
-  res.redirect("/");
+  res.redirect("/post-form");
 });
 
 app.post("/", (req, res) => {
@@ -72,7 +76,7 @@ app.post("/", (req, res) => {
     if (response.statusCode == 200) {
       res.sendFile(path.join(__dirname, "../public/success.html"));
     } else {
-      res.sendFile(path.join(__dirname, "../public/failure.html"));
+      res.redirect("/failure");
     }
     response.on("data", (data) => {
       console.log(JSON.parse(data));
