@@ -84,10 +84,10 @@ const fadeOnScroll = () => {
     let currentPos = window.pageYOffset;
 
     for (let i = 0; i < div.children.length; i++) {
-      if (currentPos > image1) {
+      if (currentPos < image1) {
         div.children[0].style.animation = "fadeToLeft 1s ease forwards";
         div.children[1].style.animation = "fadeToLeft 1s ease forwards";
-      } else if (currentPos > image2) {
+      } else if (currentPos < image2) {
         div.children[3].style.animation = "fadeToRight 1s ease forwards";
         div.children[2].style.animation = "fadeToRight 1s ease forwards";
       } else if (currentPos > image3) {
@@ -104,6 +104,7 @@ const app = () => {
   fadeOnScroll();
 
   navSlide();
+  const div = document.querySelectorAll(".container");
   for (let i = 0; i < div.length; i++) {
     div[i].addEventListener("click", () => {
       navClose();
