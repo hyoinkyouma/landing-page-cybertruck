@@ -68,15 +68,19 @@ const navSlide = () => {
 };
 
 const navClose = () => {
-  document.querySelector(".nav-items").classList.remove("nav-active");
-  document.querySelector(".logo").classList.remove("display-none");
+  const logo = document.querySelector(".logo");
+  const nav = document.querySelector(".nav-items");
+
+  nav.classList.remove("nav-active");
+  logo.classList.remove("display-none");
 };
 
 const app = () => {
-  const div = document.querySelectorAll(".container");
   submitAnimation();
   orderBtns();
   navBgOnScroll();
+
+  const div = document.querySelectorAll(".container");
   navSlide();
   for (let i = 0; i < div.length; i++) {
     div[i].addEventListener("click", () => {
