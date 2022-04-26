@@ -5,13 +5,12 @@ const app = express();
 const bodyParser = require("body-parser");
 const https = require("https");
 const path = require("path");
-//API keys and list ids are in creds.js file
-//Which isn't on github, feel free to add your own endpoints.
-//const creds = require("./creds.js");
+
+//mailchimp apikeys and list endpoint
+const creds = require("./creds.js");
+const mailchimp = creds.mailchimp;
 
 const port = process.env.PORT || 3000;
-
-//console.log(creds);
 
 //class for mailchimpjson
 function Member(email, name, number, company) {
@@ -59,8 +58,8 @@ app.post("/", (req, res) => {
   );
   const jsonData = JSON.stringify(user);
 
-  // const apiKey = creds.apiKey;
-  // const listID = creds.listID;
+  const apiKey = mailchimp.apiKey;
+  const listID = mailchimp.listID;
 
   const url = `https://us14.api.mailchimp.com/3.0/lists/${listID}`;
 
