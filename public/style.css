@@ -98,6 +98,26 @@
     transform: translateX(0);
   }
 }
+@keyframes fadeToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media only screen and (max-width: 600px) {
   @keyframes navFadeIn {
     from {
@@ -446,6 +466,7 @@ body {
   row-gap: 1rem;
 }
 #details .container img {
+  opacity: 0;
   width: 100%;
 }
 #details .container .with-video {
@@ -461,6 +482,7 @@ body {
 }
 #details .container .description {
   justify-items: center;
+  opacity: 0;
   width: 80%;
 }
 #details .container .description h3 {
@@ -499,6 +521,7 @@ body {
   height: fit-content;
   margin: 0 auto;
   justify-content: space-around;
+  gap: 1rem;
 }
 #packages .container .card {
   color: white;

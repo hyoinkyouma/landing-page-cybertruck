@@ -95,7 +95,6 @@
         const jsonData = Object.fromEntries(
           new URLSearchParams(window.location.search)
         );
-        console.log(jsonData);
         nameField.value = jsonData.fullName;
 
         if (Number(jsonData.phone) != 0) {

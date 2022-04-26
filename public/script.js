@@ -75,12 +75,34 @@ const navClose = () => {
   logo.classList.remove("display-none");
 };
 
+const fadeOnScroll = () => {
+  const div = document.getElementById("fadeInScroll");
+  const image1 = 1000;
+  const image2 = 1020;
+  const image3 = 1030;
+  window.addEventListener("scroll", () => {
+    let currentPos = window.pageYOffset;
+
+    for (let i = 0; i < div.children.length; i++) {
+      if (currentPos > image1) {
+        div.children[0].style.animation = "fadeToLeft 1s ease forwards";
+        div.children[1].style.animation = "fadeToLeft 1s ease forwards";
+      } else if (currentPos > image2) {
+        div.children[3].style.animation = "fadeToRight 1s ease forwards";
+        div.children[2].style.animation = "fadeToRight 1s ease forwards";
+      } else if (currentPos > image3) {
+        div.children[4].style.animation = "fadeUp 1s ease forwards";
+      }
+    }
+  });
+};
+
 const app = () => {
   submitAnimation();
   orderBtns();
   navBgOnScroll();
+  fadeOnScroll();
 
-  const div = document.querySelectorAll(".container");
   navSlide();
   for (let i = 0; i < div.length; i++) {
     div[i].addEventListener("click", () => {
