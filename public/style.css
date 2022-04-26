@@ -101,8 +101,7 @@
   }
 }
 nav {
-  position: relative;
-  position: absolute;
+  position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-around;
