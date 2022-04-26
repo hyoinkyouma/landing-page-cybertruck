@@ -7,6 +7,14 @@ const https = require("https");
 const path = require("path");
 
 //mailchimp apikeys and list endpoint
+//creds.js is not on github feel free to add your own endpoints
+//format is
+//{mailchimp:
+//  {
+// apiKey: ""
+// listID: ""
+//  }
+//}
 const creds = require("./creds.js");
 const mailchimp = creds.mailchimp;
 
