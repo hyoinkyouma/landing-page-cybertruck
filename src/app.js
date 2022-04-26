@@ -5,6 +5,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const https = require("https");
 const path = require("path");
+
+//mailchimp apikeys and list endpoint
 const creds = require("./creds.js");
 const mailchimp = creds.mailchimp;
 
@@ -24,12 +26,6 @@ function Member(email, name, number, company) {
     },
   ];
 }
-
-//Mailchimp keys
-//api key
-//248675f79100a1c9b71f35f22d65a5e0-us14
-//list Id
-//ff35c83c20
 
 //need css files, assets (image, font, etc.), and front-end js
 app.use(express.static(path.join(__dirname, "../public/")));
